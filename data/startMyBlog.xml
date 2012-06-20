@@ -1,21 +1,23 @@
-<dataset>
-<post>
-  <title>Goodbay Blogger, Hallo Flogger</title>
-  <date>2012-03-09</date>
-  <content>
-    <heading1>Why goodbay blogger.com ?</heading1>
-    <paragraph>
+<html>
+  <head>
+    <title>Goodbay Blogger, Hallo Flogger</title>
+    <!--<date>2012-03-09</date>
+      <update>2912-06-20</update>-->
+  </head>
+  <body>
+    <h1>Why goodbay blogger.com ?</h1>
+    <pre>
 
 Have you tried to make a backup from blogger.com ? I've tried in February 2012 and the
 result was not pleasent. Mainly because of two resoan, first (and more importantly)the
-output was not in clear format(not readable by human). second was not  important.
+output was not in clear format(not readable by human). second one was not important.
 
 So, I've decide to build my own blog and first future will be ability to export blog
 in readable format. For example all texts could appear as you are seeing it now! :-)
 
-    </paragraph>
-    <heading1>Why hallo flogger ?</heading1>
-    <paragraph>
+    </pre>
+    <h1>Why hallo flogger ?</h1>
+    <pre>
 
 Honestly I didn't search enought to find another Blogger like websites in the web, in-
 stead I've thought about what cool feature a bolg could have for programmers and read-
@@ -33,9 +35,9 @@ Here is my list for programmers :
   * ability to post to the web from command line console (not using any web browser).
   * working with open source, clean code wrritten blog software ...
 
-    <paragraph>
-    <heading2>What next ?</heading2>
-    <paragraph>
+    </pre>
+    <h2>What next ?</h2>
+    <pre>
 
 Let's start with simplest available solution today, as we speak github.com is avaiable
 for hosting the source code for open source projects. heroku.com is avaiable for host-
@@ -43,11 +45,11 @@ ing project with single free node. thoughtworks.com is available for offering ne
 en source tools (e.g. cruisecontrol.rb).
 
 I am thinking to make a project(flogger) in github.com and by help of thoughtworks to-
-ols, build a build pipeline (for automate deployment) and labblah687.heroku.com would
+ols, build a build pipeline (for automate deployment) and SidMorad.heroku.com would
 be my future blog web address.
 
 let's do that ;-)
-    <paragraph>
+    </pre>
 
-  </content>
-</post>
+  </body>
+</html>
