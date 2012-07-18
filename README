@@ -29,9 +29,6 @@ http://localhost:2299/data/startMyBlog.xml
 http://SidMorad.herokuapp.com/app/file?name=startMyBlog.xml
 http://SidMorad.herokuapp.com/data/startMyBlog.xml
 
-Want to publish to heroku ?
-heroku create --stack cedar
-heroku rename NewName
-git remote add heroku git@heroku.com:NewName.git
-git push heroku master
-done!
+or simply navigate to /data/ directory of project and use your text reader.
+
+one more thing this porject is/was fork of github.com/smoradi/flogger.git
