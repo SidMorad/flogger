@@ -1,0 +1,248 @@
+<html style="font-family: Verdana">
+	<head>
+		<title>auction2012</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<meta charset="utf-8"/>
+	</head>
+	<body style="padding-left: 40px;">
+
+<h2>auction2012</h2>
+
+   'auction' was a name we picked for a project done in 2012.   <br />
+ End result was a website for insurance companies to offer their<br />
+ insurance policies to the public. This text is going to talk   <br />
+ about software development activies done during this project   <br />
+ lifetime(from July 2012 to December 2012).                     <br />
+                                                          &nbsp;<br />
+ I was wondering how world would be like for software in 4012.  <br />
+ It will be really hard to imagine. But let say, we still need  <br />
+ programmers to solve some problems. Their day could be quite   <br />
+ different than mine. But let say, one of them may go for       <br />
+ a morning walk and during that walk, he thinks about what story<br />
+ could be solved today. Probebly there are some different tools <br />
+ and devices there that may works better than our current tools.<br />
+ For instance, I wish you have a better device than computers   <br />
+ with simple and accurate tools. Let's say simple programmerable<br />
+ device that could calculate 2 + 2 = 4 with fixed execution     <br />
+ elapsed time and always correct result(regardless of your mode <br />
+ or having a bad weather!).                                     <br />
+                                                          &nbsp;<br />
+ I found reading technical books while working as a great habit.<br />
+ Sometimes it may seems to slow you down, but in long run you   <br />
+ feels their advantages. Second useful thing for me is to see   <br />
+ a working example. About working example, I don't recommend to <br />
+ use copy command, but what I think is better to do is rewrite. <br />
+                                                          &nbsp;<br />
+ We start with writing our first test-case, It was as simple as <br />
+ Load application context and check if test environment is OK.  <br />
+ To gave you more implementation details, our team decided to go<br />
+ with Java programming language. Maven build tool was chosen for<br />
+ building and executing test-cases. I remember initial execution<br />
+ elapsed time was about 10 seconds. Loading database connection <br />
+ was included in this time, which usually such external         <br />
+ resources are resoan for delays and increasing elapsed time.   <br />
+ Using Stubs, Mocks, TestDouble etc is recommended by some      <br />
+ respectable people in such situation, but personally I found   <br />
+ testing a 'real code' it gave me better confident and it is    <br />
+ simpler and easier to write. At the same time it is possible   <br />
+ to maintain a fast test-suite under one minute time with this  <br />
+ method(which is a fair elapsed time(or not?)).                 <br />
+                                                          &nbsp;<br />
+ A meaningful test data could contribute to team communication  <br />
+ and speed up manual testing by developers. First what I mean   <br />
+ with 'meaningful test data' is a test-data that are good match <br />
+ to domain area, and domain experts are who you could get help  <br />
+ when you need to. These test-data could get mature by passing  <br />
+ development time. For example to test many business logic in   <br />
+ auction2012 we need at least a consumer, a company and         <br />
+ an auction. Let's call our consumer Jo, company Sharp and      <br />
+ auction year2012. Then you may have a business story such as   <br />
+ created policy by a company should be visiable to consumers    <br />
+ after it's auction is open to the public. Now question is      <br />
+ how many rows of data you need in your tables to make sure your<br />
+ code works OK in this scenario? the less record you need to    <br />
+ insert, the more mature is your test-data.                     <br />
+                                                          &nbsp;<br />
+ Warning: these test-data should not be modified by any test!   <br />
+ In my time JUnit testing framework could not execute tests in  <br />
+ order. Instead it recommends to make each test quite           <br />
+ independent from other tests(which seems a good thing).        <br />
+ The danger of not having ordered suite is, other computers may <br />
+ be able to find a way to break one or more tests, but you don't<br />
+ know it yet!. This test-data will also contribute to team      <br />
+ communication, for example if you want to see all consumer     <br />
+ features, then Jo consumer user could be used. and if something<br />
+ is not working for Jo and Sharp company in auction year2012,   <br />
+ then it will be easy for developers to reproduce it in their   <br />
+ local machines.                                                <br />
+                                                          &nbsp;<br />
+ Before starting this project, I was reading Domain-Secific     <br />
+ Languages book by Martin Fowler, and when project was started  <br />
+ I was looking for a part in requirements that new DSL language <br />
+ could be suitable. I havn't find any part and reading this book<br />
+ stopped. Another book that my reading was interrupted was      <br />
+ Fit for Developing Software: Framework for Integrated Tests by <br />
+ Rick Mugridge and Ward Cunningham. I did recommend FIT to my   <br />
+ team but we end up with let's give it a try in another project.<br />
+ Patterns of Enterprise Application by Martin Fowler was a book <br />
+ that I finished during this project time. I highly recommend   <br />
+ this book to anyone that is working on Enterprise Applications.<br />
+                                                          &nbsp;<br />
+ Martin Fowler and his teammates at ThoughtWorks.com are great  <br />
+ source of software development advises. Technology Radar[1] is <br />
+ a great document worth to follow. It was inside of one of these<br />
+ radars that I saw term, Evolutionary Database. after a little  <br />
+ bit search in the web, I found a book named Recipes for        <br />
+ Continuous Database Integration, Evolutionay Database          <br />
+ Developement by Paramod Sadalage. Being familar with SQL and   <br />
+ relational databases helped me to get the idea very fast.      <br />
+ automated SQL scripts are great for maintaining and modifying  <br />
+ database schema. Personally I like the fact that this technique<br />
+ make it possible to design and refactor database schema along  <br />
+ with design and refactor any part of the code.                 <br />
+                                                          &nbsp;<br />
+ To finish my book list, Implementation Patterns by Kent Beck   <br />
+ and Continuous Delivery: Reliable Software Relesases throught  <br />
+ Build, Test and Deployment Automation By Jez Humble and David  <br />
+ Farley, were last two books. Implementation patterns was       <br />
+ enjoyable read from start to the end. Continuous Devlivery was <br />
+ enjoyable read too but because of time limit, I picked         <br />
+ specific chapters that were helping us in my current project.  <br />
+ Inside of this book there is one sentence that says: deploying <br />
+ to the production server should be as easy as pushing a button!<br />
+ We didn't went that far in auction project, but I am proud to  <br />
+ say deploying to the production for us was as easy as passing  <br />
+ target version to deploy script (e.g. deploy.sh 1.0-SNAPSHOT). <br />
+                                                          &nbsp;<br />
+ Now let's talk about stealing from working examples.           <br />
+ AppFuse.org is one of my favorite project, it is always fun to <br />
+ follow it's development in dev and user mailing list.          <br />
+ Recently they release version 2.2.1 which was a great news.    <br />
+ A big thank you to Matt Raible and AppFuse team for AppFuse!   <br />
+ I also manage to recieve updates and improvement directly from <br />
+ their new fine GitHub repository[2]. Building from source code <br />
+ was a little bit difficult(Maven will download lot's of jars!) <br />
+ and I didn't have local mail server (which force me to @Ignore <br />
+ email related tests). AppFuse(2.2.1) now use better maven      <br />
+ plugin(org.codehaus.mojo:webtest-maven-plugin:1.0.0) for       <br />
+ integration-test phase. And that was a part we benefit in      <br />
+ auction2012 project too.                                       <br />
+ (Note: I have to add net.sourceforge.htmlunit:hmtlunit:2.9     <br />
+ as plugin dependency to webtest-maven-plugin for having better <br />
+ JavaScript support(e.g. jQuery blockUI works in this version)) <br />
+                                                          &nbsp;<br />
+  Spring-Roo was another great working example for us. It was   <br />
+ amazing how fast is possible to create project structure with  <br />
+ full set of features. To gave you one example, during this     <br />
+ project lifetime, one of good friend of mine, asked me to do   <br />
+ a webinar for Spring-Roo. So I did this webinar with providing <br />
+ a working example built by Spring-Roo. This web application was<br />
+ a tool for recording your exercise records[3]. GitHub shows    <br />
+ 26 August as starting development day and last commit was sent <br />
+ 31 August 2012.                                                <br />
+ One of features in this web application is ability to export   <br />
+ your records to PDF or Excel formats. This feature added with  <br />
+ one of Spring-Roo add-ons named Jasperoo. I manage to add this <br />
+ feature as single commit[4]. Later I've used this commit to    <br />
+ add this export feature to auction2012 project.                <br />
+ Spring-Roo use Spring-MVC as default technology for view layer.<br />
+ We did use Spring-MVC in auction2012 and we benefit from JSP   <br />
+ tagx files provided by Spring-Roo.                             <br />
+                                                          &nbsp;<br />
+ It was a time, we were in production stage, and that was the   <br />
+ time I saw the real value of integration-tests (Include GUI    <br />
+ acceptance testing). It was working great as safety net!       <br />
+ I do not recommend to use a test recorder for creating them.   <br />
+ Instead I do recommend to pick testing area wisely, then write <br />
+ and maintain them manually. For example 'consumer registration <br />
+ page' has high business value for our product owner, therefore <br />
+ we need to make sure any released version of application       <br />
+ will perform correctly in consumer registration process.       <br />
+ And it may be interesting to mention, later we had copule of   <br />
+ change requests in consumer registration story, which we were  <br />
+ successful to deliver them fast and with high confident.       <br />
+                                                          &nbsp;<br />
+ I've used Eclipse IDE editor for editing texts(source code).   <br />
+ By passing the time, I notice I do not want Eclipse to compile <br />
+ my source code(compile and run from console was better         <br />
+ experiance).In continue I notice I do not want any of auto     <br />
+ features, including Auto update, Auto build, Auto refresh, etc.<br />
+ Then I found what I really need is a very simple editor(not    <br />
+ Eclipse!). An editor with highlight keywords feature and       <br />
+ without network featuers!. If you are going to make one, please<br />
+ make it isolated from other existing things. Display texts     <br />
+ in monitor and save texts in a file are simple wanted features.<br />
+ Especially don't make it to be able send logs to a remote      <br />
+ computer, or a remote person use it to edit remote files.      <br />
+                                                          &nbsp;<br />
+ FreeBSD operating system and sweet home!                       <br />
+ Looking at the past one of my best decisions was migrating from<br />
+ Ubuntu operating system to FreeBSD operating system.           <br />
+ In short  my level of peace of mind increased by this change.  <br />
+ Around 27 May 2012 this migration happend according to my      <br />
+ config project[5] at GitHub. Config project includes my        <br />
+ day-to-day configurations after this migration. I did document <br />
+ these configurations in a case someone(probebly me again) need <br />
+ them.                                                          <br />
+                                                          &nbsp;<br />
+ Moving from work in office to work form home was another       <br />
+ great decision for me. Coding from home has many advantages,   <br />
+ Between them, dirinking lots of water and going to my personal <br />
+ badroom anytime I want to, are my favorite ones!               <br />
+ Sometimes it may get hard to track little important thing while<br />
+ you do hard programming. For example did you eat enough fruits <br />
+ today? or it was yesterday? If you are not sure, that is a time<br />
+ you need to write them down(in my opinoin). In my case my mom  <br />
+ was looking after these things, which was a great contribution <br />
+ to project productivity and my health.                         <br />
+                                                          &nbsp;<br />
+ Amazon kindle ebook reader has changed my world of reading     <br />
+ experiance. I bought my kindle around July 2011, while my study<br />
+ was near to finish at Southern Cross University. Thanks to my  <br />
+ parents for their great support during my study, which without <br />
+ their support none of my today successes was possible.         <br />
+ I wish everyone in the world a device similar to Amazon Kindle.<br />
+ Imagine when you are going to be born, someone will give you a <br />
+ similar device and tell you welcome to our world, this is your <br />
+ ebook reader, read as much as you like, go ahead and make      <br />
+ things, we will support you!                                   <br />
+                                                          &nbsp;<br />
+ What I am going to do next? is not much clear at this moment,  <br />
+ My Visa credit card will expire in March 2013, which is        <br />
+ kind of worry for me for not being able to buy my favorite     <br />
+ technical books after this time. I would love to travel to any <br />
+ part of the world that people does not have such worries.      <br />
+ Working in a company like ThoughtWorks would be great also[7]. <br />
+ Picking a hard problem and solving it for lots of people is a  <br />
+ very fun thing to do also.                                     <br />
+ About starting a startup company, I found nobody better than   <br />
+ Paul Graham[6] as best source of advises.                      <br />
+ My income of auction2012 is enough for me to survive at least  <br />
+ a year without working for anyone. If you are interested to    <br />
+ know what I am going to do next, follow my twitter account     <br />
+ @SidMorad                                                      <br />
+                                                          &nbsp;<br />
+                                                          &nbsp;<br />
+<b>Notes</b>                                                    <br />
+                                                          &nbsp;<br />
+[1] http://www.thoughtworks.com/radar                           <br />
+[2] https://github.com/appfuse/appfuse                          <br />
+[3] http://runfun.herokuapp.com/                                <br />
+[4] https://github.com/smoradi/runfun/commit/953e36dc           <br />
+[5] https://github.com/smoradi/config                           <br />
+[6] http://paulgraham.com                                       <br />
+[7] ThoughtWorks is especial company, you could see it from type<br />
+    of people they already have. I really like to work there one<br />
+    day. I expect to learn lots of interesting things there and <br />
+    at the same time to be able share them with outside world.  <br />
+    Which it seems they are very open to it.                    <br />
+    I am a little bit lazy to go for applying process,          <br />
+    Maybe I just wait until they contact me :-)                 <br />
+                                                          &nbsp;<br />
+                                                          &nbsp;<br />
+ <b>Thanks</b> to Behrooz Nobakht for reading drafts of this.   <br />
+                                                          &nbsp;<br />
+                                                          &nbsp;<br />
+                           <hr style="width: 50%; float:left;"/><br />
+	</body>
+</html>
