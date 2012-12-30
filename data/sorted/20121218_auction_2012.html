@@ -35,7 +35,7 @@
                                                           &nbsp;<br />
  We start with writing our first test-case, It was as simple as <br />
  Load application context and check if test environment is OK.  <br />
- To gave you more implementation details, our team decided to go<br />
+ To gave you more implementation details, my team decided to go <br />
  with Java programming language. Maven build tool was chosen for<br />
  building and executing test-cases. I remember initial execution<br />
  elapsed time was about 10 seconds. Loading database connection <br />
@@ -44,9 +44,9 @@
  Using Stubs, Mocks, TestDouble etc is recommended by some      <br />
  respectable people in such situation, but personally I found   <br />
  testing a 'real code' it gave me better confident and it is    <br />
- simpler and easier to write. At the same time it is possible   <br />
- to maintain a fast test-suite under one minute time with this  <br />
- method(which is a fair elapsed time(or not?)).                 <br />
+ simpler and easier to write for me. At the same time it is     <br />
+ possible to maintain a fast test-suite under one minute time   <br />
+ with this method(which is a fair elapsed time(or not?)).       <br />
                                                           &nbsp;<br />
  A meaningful test data could contribute to team communication  <br />
  and speed up manual testing by developers. First what I mean   <br />
@@ -56,12 +56,12 @@
  development time. For example to test many business logic in   <br />
  auction2012 we need at least a consumer, a company and         <br />
  an auction. Let's call our consumer Jo, company Sharp and      <br />
- auction year2012. Then you may have a business story such as   <br />
+ auction year12. Then you may have a business story such as     <br />
  created policy by a company should be visiable to consumers    <br />
  after it's auction is open to the public. Now question is      <br />
  how many rows of data you need in your tables to make sure your<br />
- code works OK in this scenario? the less record you need to    <br />
- insert, the more mature is your test-data.                     <br />
+ code works OK in this scenario? the point is the less record   <br />
+ you need to insert, the more mature is your test-data.         <br />
                                                           &nbsp;<br />
  Warning: these test-data should not be modified by any test!   <br />
  In my time JUnit testing framework could not execute tests in  <br />
@@ -72,39 +72,43 @@
  know it yet!. This test-data will also contribute to team      <br />
  communication, for example if you want to see all consumer     <br />
  features, then Jo consumer user could be used. and if something<br />
- is not working for Jo and Sharp company in auction year2012,   <br />
+ is not working for Jo and Sharp company in auction year12,     <br />
  then it will be easy for developers to reproduce it in their   <br />
- local machines.                                                <br />
+ local machines. I am planning to read a book named [xUnit Test <br />
+ Patterns: Refactoring Test Code by Gerard Meszaros] to learn   <br />
+ more about refactoring test code.                              <br />
                                                           &nbsp;<br />
- Before starting this project, I was reading Domain-Secific     <br />
- Languages book by Martin Fowler, and when project was started  <br />
- I was looking for a part in requirements that new DSL language <br />
- could be suitable. I havn't find any part and reading this book<br />
- stopped. Another book that my reading was interrupted was      <br />
- Fit for Developing Software: Framework for Integrated Tests by <br />
- Rick Mugridge and Ward Cunningham. I did recommend FIT to my   <br />
- team but we end up with let's give it a try in another project.<br />
- Patterns of Enterprise Application by Martin Fowler was a book <br />
- that I finished during this project time. I highly recommend   <br />
- this book to anyone that is working on Enterprise Applications.<br />
+ Before starting this project, I was reading book [Domain-      <br />
+ Specific Languages by Martin Fowler], and when project was     <br />
+ started, I was looking for a part in requirements that new DSL <br />
+ language could be suitable. I havn't find any part and reading <br />
+ this book stopped. Another book that my reading was interrupted<br />
+ was [Fit for Developing Software: Framework for Integrated     <br />
+ Tests by Rick Mugridge and Ward Cunningham]. I did recommend   <br />
+ FIT to my team but we end up with let's give it a try in       <br />
+ another project. [Patterns of Enterprise Application by Martin <br />
+ Fowler] was a book that I finished during this project time.   <br />
+ I highly recommend this book to anyone that is working on      <br />
+ Enterprise Applications.                                       <br />
                                                           &nbsp;<br />
  Martin Fowler and his teammates at ThoughtWorks.com are great  <br />
  source of software development advises. Technology Radar[1] is <br />
  a great document worth to follow. It was inside of one of these<br />
  radars that I saw term, Evolutionary Database. after a little  <br />
- bit search in the web, I found a book named Recipes for        <br />
+ bit search in the web, I found a book named [Recipes for       <br />
  Continuous Database Integration, Evolutionay Database          <br />
- Developement by Paramod Sadalage. Being familar with SQL and   <br />
+ Developement by Paramod Sadalage]. Being familar with SQL and  <br />
  relational databases helped me to get the idea very fast.      <br />
  automated SQL scripts are great for maintaining and modifying  <br />
- database schema. Personally I like the fact that this technique<br />
- make it possible to design and refactor database schema along  <br />
- with design and refactor any part of the code.                 <br />
+ database schema. Personally I like the fact that these         <br />
+ techniques will make it possible to design and refactor        <br />
+ database schema along with design and refactor any part of the <br />
+ code.                                                          <br />
                                                           &nbsp;<br />
- To finish my book list, Implementation Patterns by Kent Beck   <br />
- and Continuous Delivery: Reliable Software Relesases throught  <br />
+ To finish my book list, [Implementation Patterns by Kent Beck] <br />
+ and [Continuous Delivery: Reliable Software Relesases through  <br />
  Build, Test and Deployment Automation By Jez Humble and David  <br />
- Farley, were last two books. Implementation patterns was       <br />
+ Farley], were last two books. Implementation patterns was      <br />
  enjoyable read from start to the end. Continuous Devlivery was <br />
  enjoyable read too but because of time limit, I picked         <br />
  specific chapters that were helping us in my current project.  <br />
@@ -170,7 +174,7 @@
  Then I found what I really need is a very simple editor(not    <br />
  Eclipse!). An editor with highlight keywords feature and       <br />
  without network featuers!. If you are going to make one, please<br />
- make it isolated from other existing things. Display texts     <br />
+ make it isolated from all other existing things. Display texts <br />
  in monitor and save texts in a file are simple wanted features.<br />
  Especially don't make it to be able send logs to a remote      <br />
  computer, or a remote person use it to edit remote files.      <br />
@@ -185,7 +189,7 @@
  these configurations in a case someone(probebly me again) need <br />
  them.                                                          <br />
                                                           &nbsp;<br />
- Moving from work in office to work form home was another       <br />
+ Moving from work in office to work from home was another       <br />
  great decision for me. Coding from home has many advantages,   <br />
  Between them, dirinking lots of water and going to my personal <br />
  badroom anytime I want to, are my favorite ones!               <br />
@@ -200,7 +204,7 @@
  experiance. I bought my kindle around July 2011, while my study<br />
  was near to finish at Southern Cross University. Thanks to my  <br />
  parents for their great support during my study, which without <br />
- their support none of my today successes was possible.         <br />
+ their support none of my achievements was not possible today.  <br />
  I wish everyone in the world a device similar to Amazon Kindle.<br />
  Imagine when you are going to be born, someone will give you a <br />
  similar device and tell you welcome to our world, this is your <br />
@@ -219,7 +223,7 @@
  Paul Graham[6] as best source of advises.                      <br />
  My income of auction2012 is enough for me to survive at least  <br />
  a year without working for anyone. If you are interested to    <br />
- know what I am going to do next, follow my twitter account     <br />
+ know what I am going to do next, watch my twitter account      <br />
  @SidMorad                                                      <br />
                                                           &nbsp;<br />
                                                           &nbsp;<br />
