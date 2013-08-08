@@ -3,20 +3,19 @@ papyrus2013
 
   'papyrus' was a name we picked for a software project done in 2013.
 Papyrus in short is: A prescription coordination service and management software.
-In this text I am going to talk about my software development activities - done
-during this project lifetime(from March 2013 to July 2013).
+In this text I am going to talk about my software development activities during
+this project lifetime(from March 2013 to July 2013).
 
 
   I guess it was in January that I read a presentation named "Micro Services -
-Java the Unix way" by James Lewis. Most of contents was quite new ideas to me,
-and I felt right away feeling of - I want to try this.
-I remember I did copule of search in the Internet and not many clear resources
-founded in that time.  Later in Febuary I receive an email from good friend of
-mine about papyrus job offer with following subject: "A rather small project
-with some cool tech?". Something in my head said, well this may be a good
-chance to learn new things while working. Say yes to it with accepting these
-new learning challenges. Looking in the past, I am happy that I did so -
-let's explore my actions together.
+Java the Unix way" by James Lewis.  Most of contents was quite new ideas to me,
+and I felt right away that I want to try this.  I remember I did some research
+on the net and not many clear resources could I find(in that time).  Later in
+Febuary I received an email from good friend of mine about papyrus job offer
+with following subject: "A rather small project with some cool tech?".
+Something in my head said, well this may be a good chance to learn new things
+while working. Say yes to it with accepting these new learning challenges.
+Looking in the past, I am happy that I did so, let's explore them together.
 
 
   After initial talk about requirements, I did start reading book
@@ -32,8 +31,8 @@ the book interesting enough to read all chapters from start to the end.
 book "REST in Practice: Hypermedia and Systems Architecture" by Ian Robinson,
 Jim Webber and Savas Parastatidis. From start, I knew this book is a great
 guideline. Luckily they didn't just talk about the ideas, they provide code
-samples too. Which was great, especially with including testcases. What I did
-after was - rewriting these testcases for papyrus domain(prescription).
+samples too. Which was great, especially with including test cases. What I did
+after was, rewriting these test cases for papyrus domain(prescription).
 Thanks also to my teammate's improvments and refactorings, we went to production
 stage smoothly.
 
@@ -43,17 +42,17 @@ is the way Mirco services allows developers to connect different modules
 together. Second one for me is, deploying to production is not about deploying
 a big binary(e.g. .war) file anymore. It's about collection of micro services
 that are typical operating system daemons. And they talk to each other through
-http protocol and pure text. Last one for me is, the ability to scale with this
-style, As author says in the book, look at World Wide Web and see how nicely is
-scaled between many many... computers.
+HTTP protocol and pure text. Last one for me is, the ability to scale with this
+style, as author says in the book, look at World Wide Web and see how nicely is
+scaled between many many computers.
 
 
   We considered copule of options for UI(User Interface) module. Between
-three finalist: Grails, RubyOnRails and PlayFramework - we decided to go with
+three finalist: Grails, RubyOnRails and PlayFramework, we decided to go with
 PlayFramework. At the time, Play! 2.1.1 was last availabe release and we picked
-that version to start with. But we had another decision to make - Java or Scala
-implementation?. I didn't know which one suites us better? in that time, So
-I start to read posts in Playframework-mailing-list. Generally I saw more
+that version to start with. But we had another decision to make: Java or Scala
+implementation? I didn't know which one suites us better? in that time, So I
+start to read posts in Playframework-mailing-list. Generally I saw more
 positive feedbacks about Scala implementation. Therefore I suggest to the team
 to use Scala base project. Team accept my suggestion and we got into the action
 with simple tutorial from Playframework website.
@@ -61,13 +60,13 @@ with simple tutorial from Playframework website.
 
   I notice simple tutorials or playframework advance sample applications aren't
 enough to continue coding in Scala. I did search about Scala programming books.
-Book "Programming in Scala: A Comprehensive Step-by-Step Guide"(second edition)
-by Martin Odersky, Lex Spoon and Bill Venners - was the one I bought.
+The book "Programming in Scala: A Comprehensive Step-by-Step Guide"(second
+edition) by Martin Odersky, Lex Spoon and Bill Venners was the one I bought.
 The book has fluent tone with lot's of code samples. I usually like to execute
 code sample while I am reading a book. But this time perhaps because of time
-limit - I read more quickly without writing the book's code examples. Reading
-this book was quite helpful to write code in Scala and also understand better 
-some of Playframework's features and magics.
+limit I read more quickly without writing the book's code examples. Reading this
+book was quite helpful to write code in Scala and also understand better some of
+Playframework's features and magics.
 
 
   In my auction2012 post, I mentioned my plan for reading book "xUnit Test
@@ -76,13 +75,13 @@ book and read till chapter 22. It was a good read, in many parts I was happy to
 know that I was not only one to have difficulties in organizing test cases.
 For example I was bitten with 'behavior smells' many times. Which knowing about
 another style of defense - was encourging me to keep reading. In the other hand
-I had a little trouble with formatting of code samples in the book.
-I've this book in my Amazon Kindle device and I hope this issue exist only in 
-Kindle versions. If you read the book "Refactoring" By Martin Fowler? you see
+I had a little trouble with formatting of code samples in the book. I have this
+book in my Amazon Kindle device and I hope this issue exist only in Kindle
+versions. If you've read the book "Refactoring" By Martin Fowler, you will see
 sample code are in bold format after they are refactored, which make it easy to
-see exactly which parts changed and improved. In xUnit book formatting of
-code samples before and after changes are the same. Which make it hard for 
-me(easy to be distracted person) to follow them.
+see exactly which parts changed and improved. In xUnit book formatting of code
+samples before and after changes are the same. This make it hard for me(easy to
+be distracted kind of person) to follow them.
 
 
   Speaking of Martin Fowler, I would like to recommend you to read all of his
@@ -94,16 +93,19 @@ book was to know - what is happening with term NoSQL? and the book done a great
 job to explain what is going on.
 
 
-Book "Refactoring HTML: Improving the Design of Existing Web Applications" by
-Ellitte Rusty Harold (Martin's signature) was another book I manage to read
-after auction2012. I am strongly agree with author in part that: every website
+  The book "Refactoring HTML: Improving the Design of Existing Web Applications"
+by Ellitte Rusty Harold (Martin's signature) was another book I managed to read
+after auction2012. I strongly agree with author in part that: every website
 should be able to function without JavaScript, Flash, Applet or any other
 third-party technology. I hope to see more this kind of websites in future.
-These days, most of works I am doing are web base applications.
-And HTML is end result in all of them. I found reading this book like a good 
-investment, which all of my works could benefit from.
-Thanks to Ellitte, Martin, Pramod, Bill, Lex, Martin, Savas, Jim, Ian and Robert.
-Thanks to all writers who make the world a better place with their writings.
+These days, most of works I am doing are web base applications. And HTML is end
+result in all of them. I found reading this book like a good investment, which
+all of my works could benefit from.
+
+
+  Thanks to Ellitte, Pramod, Martin, Gerard, Bill, Lex, Martin, Savas, Jim, Ian,
+Robert and James.  Thanks to all writers who make the world a better place with
+their writings.
 
 
 Notes:
