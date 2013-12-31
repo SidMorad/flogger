@@ -1,0 +1,160 @@
+<html xmlns='http://www.w3.org/1999/xhtml'>
+ <head>
+  <title>webebook2013</title>
+  <meta http-equiv = 'Content-Type' content = 'text/html; charset=utf-8' />
+  <style type = 'text/css'>
+   html {
+    font-family: Monospace, Verdana; }
+   body {
+    padding-left: 10%; }
+   .pre {
+    white-space:pre; }
+  </style>
+ </head>
+ <body>
+  <div>
+
+<h2>webebook2013</h2>
+<p> First edition on 2013 12(Dec) 31</p>
+<p> Second edition on 2016 03(March) 11</p><!--My clock shows March 10 -->
+<p>
+   'webebook' was a name I choice for my startup project in year 2013.<br/>
+ End result is a website(http://webebook.org) for people who like<br/>
+ to read. The core of idea is to make it possible for people to  <br/>
+ organize what they found (in the web) interesting in one place  <br/>
+ and also make it possible for them to read it in their own      <br/>
+ favorite devices and peaceful places. For example, Amazon Kindle<br/>
+ is my favorite device and any public library could be a peaceful<br/>
+ place for reading stuff. (* open fields are peaceful too)       <br/>
+                                                                 <br/>
+                                                                 <br/>
+</p>
+<p>
+ In part of my post 'auction2012', I talk about the idea of      <br/>
+ giving everyone an ebook reader when they reach certain age.    <br/>
+ I said when they just were born! but it make sense to wait a    <br/>
+ little bit more. I don't know when this could be possible and   <br/>
+ personally I like to see that day when I am still alive. That   <br/>
+ moltivate me(and could also moltivate my competitors) to provide<br/>
+ useful content for these huge potential of people that are      <br/>
+ hungry for reading useful contents. I believe people could      <br/>
+ travel accross universe one day, What I feel to apologize for it<br/>
+ today is lake of our vision and those toughts limited by        <br/>
+ resources.(*Believing resources are unlimited is a good believe)<br/>
+                                                                 <br/>
+                                                                 <br/>
+</p>
+<p>
+ Writing and Reading are best communication channels for transfer<br/>
+ knowledge and information. This opinion may sounds surprising   <br/>
+ (today) to some that prefer to watch and/or hear things.        <br/>
+ Imagine you don't know a person at all and there are these three<br/>
+ options for you to know him or her better. You could watch his  <br/>
+ or her interview. You could listen to that interview. You could <br/>
+ read transcript of that interview. Personally I prefer to read  <br/>
+ transcript of interview first. Simply because there are less    <br/>
+ noises involved in transfering contents through text than other <br/>
+ formats. (* Reading books, simple idea that works for all times)<br/>
+                                                                 <br/>
+                                                                 <br/>
+</p>
+<p>
+ To be frank there is one more thing, that contribute to creation<br/>
+ of Webebook. And that is a question: How could we help you? If  <br/>
+ you were born(or born again) in worst part of the world. First  <br/>
+ no offense to third world countries. I would say if you don't   <br/>
+ have access to stable internet connection. Or if you don't have <br/>
+ access to specific knowledge and information because of your    <br/>
+ location and country. Then how could we make it possible for you<br/>
+ to access pure knowledge and information worldwide (* offline). <br/>
+ I don't know how far Webebook could go, but let's hope by your  <br/>
+ contribution we make that possible. (* knowledge is trustable)  <br/>
+                                                                 <br/>
+                                                                 <br/>
+</p>
+<p>
+ Speaking of how far Webebook could go, I am not sure of money   <br/>
+ support at the moment. Currently I am using the money I earned  <br/>
+ form auction2012 project. And unfortunetly I am not in USA(a    <br/>
+ great place that great things are possible). If you have garage <br/>
+ or basement in California and if you are famous in the internet <br/>
+ somehow with blogging and doing stuff, then please contact me   <br/>
+ for going big. (* having a swimming pool is optional)           <br/>
+<!-- (* I like to experaince American football too) -->
+                                                                 <br/>
+                                                                 <br/>
+</p>
+<p>
+ From technical point of view, I enjoyed evolutionary database   <br/>
+ design technic while implementing Webebook. Every database      <br/>
+ change is included in SQL script. Scripts are sorted by date    <br/>
+ and also have execution number. For example for rollback this   <br/>
+ month changes, following regex could be used:                   <br/>
+ <code class='pre'>201[3-9]-[1][2-9]-[0-3][0-9]-[0][0]-rollback.sql</code>
+                                                                 <br/>
+                                                                 <br/>
+ Note: for rollback you also need to flag sort as reverse.       <br/>
+ which includes following scripts:
+ <code class='pre'>
+  2013-12-30-00-rollback.sql
+  2013-12-26-00-rollback.sql
+  2013-12-15-00-rollback.sql
+  2013-12-13-00-rollback.sql
+  2013-12-03-00-rollback.sql
+ </code>
+ For including table and sequence creation, alter and insert into<br/>
+ tables:
+                                                                 <br/>
+ <code class='pre'>201[3-9]-[1][2-9]-[0-3][0-9]-[1-9][1-9]-*.sql</code>
+                                                                 <br/>
+ which includes following scripts:
+ <code class='pre'>
+  2013-12-03-11-tag.sql
+  2013-12-03-22-creator.sql
+  2013-12-03-33-contributor.sql
+  2013-12-03-44-book-tag.sql
+  2013-12-03-77-alter-book.sql
+  2013-12-03-88-sequence.sql
+  2013-12-13-77-alter-book.sql
+  2013-12-15-77-alter-book.sql
+  2013-12-15-77-alter-usr.sql
+  2013-12-15-99-update.sql
+  2013-12-26-11-zarinpalevent.sql
+  2013-12-30-88-sequence.sql
+ </code>
+                                                                 <br/>
+ and finally following regex is safe for default:                <br/>
+ <code class='pre'>201[3-9]-[1][2-9]-[0-3][0-9]-[0-9][1-6]-*.sql</code>
+                                                                 <br/>
+ which includes only following scripts:
+ <code class='pre'>
+  2013-12-03-11-tag.sql
+  2013-12-03-22-creator.sql
+  2013-12-03-33-contributor.sql
+  2013-12-03-44-book-tag.sql
+  2013-12-26-11-zarinpalevent.sql
+ </code>
+                                                                 <br/>
+ note: 1-to-6 scripts start with CREATE TABLE IF NOT EXISTS      <br/>
+ so it doesn't matter if they be part of build every times.      <br/>
+ I also recommend to have another safty check for your production<br/>
+ database. (* Apache-Ant [target name="checkImportantdb"])       <br/>
+                                                                 <br/>
+                                                                 <br/>
+</p>
+<p>
+ There are some other technics that I like to talk about them    <br/>
+ here, but perhaps I will add them here in another time.         <br/>
+ If you are interested to know some of them right now, then read <br/>
+ papyrus2013 post. Once again I would like to thank all writers  <br/>
+ who helped me with their programming books.                     <br/>
+ Happy new year 2014 :-)                                         <br/>
+ If you are interested to know more about Webebook, follow       <br/>
+ twitter account                                                 <br/>
+ @Webebook                                                       <br/>
+                                                                 <br/>
+                                                                 <br/>
+</p>
+  </div>
+ </body>
+</html>
