@@ -1,38 +1,39 @@
-<html style="font-family: Verdana">
+<html xmlns = 'http://www.w3.org/1999/xhtml'>
 	<head>
 		<title>auction2012</title>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-		<meta charset="utf-8"/>
 	</head>
-	<body style="padding-left: 40px;">
+	<body style="padding-left: 40px; font-family: Verdana">
 
 <h2>auction2012</h2>
-
+<p>
    'auction' was a name we picked for a project done in 2012.   <br />
  End result was a website for insurance companies to offer their<br />
  insurance policies to the public. This text is going to talk   <br />
  about software development activies done during this project   <br />
  lifetime(from July 2012 to December 2012).                     <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  I was wondering how world would be like for software in 4012.  <br />
  It will be really hard to imagine. But let say, we still need  <br />
  programmers to solve some problems. Their day could be quite   <br />
  different than mine. But let say, one of them may go for       <br />
  a morning walk and during that walk, he thinks about what story<br />
- could be solved today. Probebly there are some different tools <br />
+ could be solved today. Probably there are some different tools <br />
  and devices there that may works better than our current tools.<br />
  For instance, I wish you have a better device than computers   <br />
  with simple and accurate tools. Let's say simple programmerable<br />
  device that could calculate 2 + 2 = 4 with fixed execution     <br />
  elapsed time and always correct result(regardless of your mode <br />
  or having a bad weather!).                                     <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  I found reading technical books while working as a great habit.<br />
  Sometimes it may seems to slow you down, but in long run you   <br />
  feels their advantages. Second useful thing for me is to see   <br />
  a working example. About working example, I don't recommend to <br />
  use copy command, but what I think is better to do is rewrite. <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  We start with writing our first test-case, It was as simple as <br />
  Load application context and check if test environment is OK.  <br />
  To gave you more implementation details, my team decided to go <br />
@@ -47,7 +48,8 @@
  simpler and easier to write for me. At the same time it is     <br />
  possible to maintain a fast test-suite under one minute time   <br />
  with this method(which is a fair elapsed time(or not?)).       <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  A meaningful test data could contribute to team communication  <br />
  and speed up manual testing by developers. First what I mean   <br />
  with 'meaningful test data' is a test-data that are good match <br />
@@ -62,7 +64,8 @@
  how many rows of data you need in your tables to make sure your<br />
  code works OK in this scenario? the point is the less record   <br />
  you need to insert, the more mature is your test-data.         <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  Warning: these test-data should not be modified by any test!   <br />
  In my time JUnit testing framework could not execute tests in  <br />
  order. Instead it recommends to make each test quite           <br />
@@ -77,11 +80,12 @@
  local machines. I am planning to read a book named [xUnit Test <br />
  Patterns: Refactoring Test Code by Gerard Meszaros] to learn   <br />
  more about refactoring test code.                              <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  Before starting this project, I was reading book [Domain-      <br />
  Specific Languages by Martin Fowler], and when project was     <br />
  started, I was looking for a part in requirements that new DSL <br />
- language could be suitable. I havn't find any part and reading <br />
+ language could be suitable. I haven't find any part and reading <br />
  this book stopped. Another book that my reading was interrupted<br />
  was [Fit for Developing Software: Framework for Integrated     <br />
  Tests by Rick Mugridge and Ward Cunningham]. I did recommend   <br />
@@ -90,7 +94,8 @@
  Fowler] was a book that I finished during this project time.   <br />
  I highly recommend this book to anyone that is working on      <br />
  Enterprise Applications.                                       <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  Martin Fowler and his teammates at ThoughtWorks.com are great  <br />
  source of software development advises. Technology Radar[1] is <br />
  a great document worth to follow. It was inside of one of these<br />
@@ -104,7 +109,8 @@
  techniques will make it possible to design and refactor        <br />
  database schema along with design and refactor any part of the <br />
  code.                                                          <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  To finish my book list, [Implementation Patterns by Kent Beck] <br />
  and [Continuous Delivery: Reliable Software Relesases through  <br />
  Build, Test and Deployment Automation By Jez Humble and David  <br />
@@ -117,7 +123,8 @@
  We didn't went that far in auction project, but I am proud to  <br />
  say deploying to the production for us was as easy as passing  <br />
  target version to deploy script (e.g. deploy.sh 1.0-SNAPSHOT). <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  Now let's talk about stealing from working examples.           <br />
  AppFuse.org is one of my favorite project, it is always fun to <br />
  follow it's development in dev and user mailing list.          <br />
@@ -134,7 +141,8 @@
  (Note: I have to add net.sourceforge.htmlunit:hmtlunit:2.9     <br />
  as plugin dependency to webtest-maven-plugin for having better <br />
  JavaScript support(e.g. jQuery blockUI works in this version)) <br />
-                                                          &nbsp;<br />
+</p>
+<p>
   Spring-Roo was another great working example for us. It was   <br />
  amazing how fast is possible to create project structure with  <br />
  full set of features. To gave you one example, during this     <br />
@@ -152,7 +160,8 @@
  Spring-Roo use Spring-MVC as default technology for view layer.<br />
  We did use Spring-MVC in auction2012 and we benefit from JSP   <br />
  tagx files provided by Spring-Roo.                             <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  It was a time, we were in production stage, and that was the   <br />
  time I saw the real value of integration-tests (Include GUI    <br />
  acceptance testing). It was working great as safety net!       <br />
@@ -165,7 +174,8 @@
  And it may be interesting to mention, later we had copule of   <br />
  change requests in consumer registration story, which we were  <br />
  successful to deliver them fast and with high confident.       <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  I've used Eclipse IDE editor for editing texts(source code).   <br />
  By passing the time, I notice I do not want Eclipse to compile <br />
  my source code(compile and run from console was better         <br />
@@ -178,7 +188,8 @@
  in monitor and save texts in a file are simple wanted features.<br />
  Especially don't make it to be able send logs to a remote      <br />
  computer, or a remote person use it to edit remote files.      <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  FreeBSD operating system and sweet home!                       <br />
  Looking at the past one of my best decisions was migrating from<br />
  Ubuntu operating system to FreeBSD operating system.           <br />
@@ -188,29 +199,32 @@
  day-to-day configurations after this migration. I did document <br />
  these configurations in a case someone(probebly me again) need <br />
  them.                                                          <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  Moving from work in office to work from home was another       <br />
  great decision for me. Coding from home has many advantages,   <br />
  Between them, dirinking lots of water and going to my personal <br />
- badroom anytime I want to, are my favorite ones!               <br />
+ badroom anytime I want to, is my favorite one!                 <br />
  Sometimes it may get hard to track little important thing while<br />
  you do hard programming. For example did you eat enough fruits <br />
  today? or it was yesterday? If you are not sure, that is a time<br />
  you need to write them down(in my opinoin). In my case my mom  <br />
  was looking after these things, which was a great contribution <br />
  to project productivity and my health.                         <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  Amazon kindle ebook reader has changed my world of reading     <br />
  experiance. I bought my kindle around July 2011, while my study<br />
  was near to finish at Southern Cross University. Thanks to my  <br />
  parents for their great support during my study, which without <br />
- their support none of my achievements was not possible today.  <br />
+ their support none of my achievements was possible today.      <br />
  I wish everyone in the world a device similar to Amazon Kindle.<br />
  Imagine when you are going to be born, someone will give you a <br />
  similar device and tell you welcome to our world, this is your <br />
  ebook reader, read as much as you like, go ahead and make      <br />
  things, we will support you!                                   <br />
-                                                          &nbsp;<br />
+</p>
+<p>
  What I am going to do next? is not much clear at this moment,  <br />
  My Visa credit card will expire in March 2013, which is        <br />
  kind of worry for me for not being able to buy my favorite     <br />
@@ -225,10 +239,11 @@
  a year without working for anyone. If you are interested to    <br />
  know what I am going to do next, watch my twitter account      <br />
  @SidMorad                                                      <br />
-                                                          &nbsp;<br />
-                                                          &nbsp;<br />
+</p>
+<p>
+                                                                <br />
 <b>Notes</b>                                                    <br />
-                                                          &nbsp;<br />
+                                                                <br />
 [1] http://www.thoughtworks.com/radar                           <br />
 [2] https://github.com/appfuse/appfuse                          <br />
 [3] http://runfun.herokuapp.com/                                <br />
@@ -242,11 +257,12 @@
     Which it seems they are very open to it.                    <br />
     I am a little bit lazy to go for applying process,          <br />
     Maybe I just wait until they contact me :-)                 <br />
-                                                          &nbsp;<br />
-                                                          &nbsp;<br />
+                                                                <br />
+                                                                <br />
  <b>Thanks</b> to Behrooz Nobakht for reading drafts of this.   <br />
-                                                          &nbsp;<br />
-                                                          &nbsp;<br />
-                           <hr style="width: 50%; float:left;"/><br />
+                                                                <br />
+                                                                <br />
+</p>
+<hr style="width: 50%; float:left;"/>
 	</body>
 </html>
