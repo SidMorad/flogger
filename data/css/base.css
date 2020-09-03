@@ -1,0 +1,6 @@
+body {
+  font-family: monospace;
+}
+p {
+  max-width: 80ch;
+}

@@ -11,7 +11,7 @@ this project lifetime(from March 2013 to July 2013).
 Java the Unix way" by James Lewis.  Most of contents was quite new ideas to me,
 and I felt right away that I want to try this.  I remember I did some research
 on the net and not many clear resources could I find(in that time).  Later in
-Febuary I received an email from good friend of mine about papyrus job offer
+February I received an email from good friend of mine about papyrus job offer
 with following subject: "A rather small project with some cool tech?".
 Something in my head said, well this may be a good chance to learn new things
 while working. Say yes to it with accepting these new learning challenges.
@@ -33,7 +33,7 @@ Jim Webber and Savas Parastatidis. From start, I knew this book is a great
 guideline. Luckily they didn't just talk about the ideas, they provide code
 samples too. Which was great, especially with including test cases. What I did
 after was, rewriting these test cases for papyrus domain(prescription).
-Thanks also to my teammate's improvments and refactorings, we went to production
+Thanks also to my teammate's improvements and refactorings, we went to production
 stage smoothly.
 
 
@@ -47,13 +47,13 @@ style, as author says in the book, look at World Wide Web and see how nicely is
 scaled between many many computers.
 
 
-  We considered copule of options for UI(User Interface) module. Between
+  We considered couple of options for UI(User Interface) module. Between
 three finalist: Grails, RubyOnRails and PlayFramework, we decided to go with
-PlayFramework. At the time, Play! 2.1.1 was last availabe release and we picked
+PlayFramework. At the time, Play! 2.1.1 was last available release and we picked
 that version to start with. But we had another decision to make: Java or Scala
 implementation? I didn't know which one suites us better? in that time, So I
 start to read posts in Playframework-mailing-list. Generally I saw more
-positive feedbacks about Scala implementation. Therefore I suggest to the team
+positive feedback about Scala implementation. Therefore I suggest to the team
 to use Scala base project. Team accept my suggestion and we got into the action
 with simple tutorial from Playframework website.
 
@@ -74,7 +74,7 @@ Patterns: Refactoring Test Code" by Gerard Meszaros. I did manage to buy this
 book and read till chapter 22. It was a good read, in many parts I was happy to
 know that I was not only one to have difficulties in organizing test cases.
 For example I was bitten with 'behavior smells' many times. Which knowing about
-another style of defense - was encourging me to keep reading. In the other hand
+another style of defense - was encouraging me to keep reading. In the other hand
 I had a little trouble with formatting of code samples in the book. I have this
 book in my Amazon Kindle device and I hope this issue exist only in Kindle
 versions. If you've read the book "Refactoring" By Martin Fowler, you will see
@@ -86,7 +86,7 @@ be distracted kind of person) to follow them.
 
   Speaking of Martin Fowler, I would like to recommend you to read all of his
 books[1] and also his signature series if you are looking for something.
-Personally I had always good expriance after reading one of his books, last one
+Personally I had always good experience after reading one of his books, last one
 was "NoSQL Distilled: A Brief Guide to the Emerging World of Polyglot
 Persistence" by Martin Fowler and Pramod Sadalage. My intention for reading this
 book was to know - what is happening with term NoSQL? and the book done a great
